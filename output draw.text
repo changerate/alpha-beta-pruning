@@ -1,0 +1,885 @@
+
+Welcome to the alpha-beta pruning algorithm
+that's battling you in a game of tic-tac-toe.
+
+  1 2 3 4 5 6 7 8 
+A - - - - - - - - 
+B - - - - - - - - 
+C - - - - - - - - 
+D - - - - - - - - 
+E - - - - - - - - 
+F - - - - - - - - 
+G - - - - - - - - 
+H - - - - - - - - 
+
+Who would you like to go first? Human or AI? (human or ai): human
+Enter your move: c4
+
+  1 2 3 4 5 6 7 8 
+A - - - - - - - - 
+B - - - - - - - - 
+C - - - O - - - - 
+D - - - - - - - - 
+E - - - - - - - - 
+F - - - - - - - - 
+G - - - - - - - - 
+H - - - - - - - - 
+
+
+AI is thinking...
+My move is c5
+
+  1 2 3 4 5 6 7 8 
+A - - - - - - - - 
+B - - - - - - - - 
+C - - - O X - - - 
+D - - - - - - - - 
+E - - - - - - - - 
+F - - - - - - - - 
+G - - - - - - - - 
+H - - - - - - - - 
+
+
+Enter your move: d4
+
+  1 2 3 4 5 6 7 8 
+A - - - - - - - - 
+B - - - - - - - - 
+C - - - O X - - - 
+D - - - O - - - - 
+E - - - - - - - - 
+F - - - - - - - - 
+G - - - - - - - - 
+H - - - - - - - - 
+
+
+AI is thinking...
+My move is b4
+
+  1 2 3 4 5 6 7 8 
+A - - - - - - - - 
+B - - - X - - - - 
+C - - - O X - - - 
+D - - - O - - - - 
+E - - - - - - - - 
+F - - - - - - - - 
+G - - - - - - - - 
+H - - - - - - - - 
+
+
+Enter your move: e4
+
+  1 2 3 4 5 6 7 8 
+A - - - - - - - - 
+B - - - X - - - - 
+C - - - O X - - - 
+D - - - O - - - - 
+E - - - O - - - - 
+F - - - - - - - - 
+G - - - - - - - - 
+H - - - - - - - - 
+
+
+AI is thinking...
+My move is f4
+
+  1 2 3 4 5 6 7 8 
+A - - - - - - - - 
+B - - - X - - - - 
+C - - - O X - - - 
+D - - - O - - - - 
+E - - - O - - - - 
+F - - - X - - - - 
+G - - - - - - - - 
+H - - - - - - - - 
+
+
+Enter your move: d3
+
+  1 2 3 4 5 6 7 8 
+A - - - - - - - - 
+B - - - X - - - - 
+C - - - O X - - - 
+D - - O O - - - - 
+E - - - O - - - - 
+F - - - X - - - - 
+G - - - - - - - - 
+H - - - - - - - - 
+
+
+AI is thinking...
+My move is d2
+
+  1 2 3 4 5 6 7 8 
+A - - - - - - - - 
+B - - - X - - - - 
+C - - - O X - - - 
+D - X O O - - - - 
+E - - - O - - - - 
+F - - - X - - - - 
+G - - - - - - - - 
+H - - - - - - - - 
+
+
+Enter your move: d6
+
+  1 2 3 4 5 6 7 8 
+A - - - - - - - - 
+B - - - X - - - - 
+C - - - O X - - - 
+D - X O O - O - - 
+E - - - O - - - - 
+F - - - X - - - - 
+G - - - - - - - - 
+H - - - - - - - - 
+
+
+AI is thinking...
+My move is d5
+
+  1 2 3 4 5 6 7 8 
+A - - - - - - - - 
+B - - - X - - - - 
+C - - - O X - - - 
+D - X O O X O - - 
+E - - - O - - - - 
+F - - - X - - - - 
+G - - - - - - - - 
+H - - - - - - - - 
+
+
+Enter your move: b5
+
+  1 2 3 4 5 6 7 8 
+A - - - - - - - - 
+B - - - X O - - - 
+C - - - O X - - - 
+D - X O O X O - - 
+E - - - O - - - - 
+F - - - X - - - - 
+G - - - - - - - - 
+H - - - - - - - - 
+
+
+AI is thinking...
+My move is e5
+
+  1 2 3 4 5 6 7 8 
+A - - - - - - - - 
+B - - - X O - - - 
+C - - - O X - - - 
+D - X O O X O - - 
+E - - - O X - - - 
+F - - - X - - - - 
+G - - - - - - - - 
+H - - - - - - - - 
+
+
+Enter your move: f5
+
+  1 2 3 4 5 6 7 8 
+A - - - - - - - - 
+B - - - X O - - - 
+C - - - O X - - - 
+D - X O O X O - - 
+E - - - O X - - - 
+F - - - X O - - - 
+G - - - - - - - - 
+H - - - - - - - - 
+
+
+AI is thinking...
+My move is c2
+
+  1 2 3 4 5 6 7 8 
+A - - - - - - - - 
+B - - - X O - - - 
+C - X - O X - - - 
+D - X O O X O - - 
+E - - - O X - - - 
+F - - - X O - - - 
+G - - - - - - - - 
+H - - - - - - - - 
+
+
+Enter your move: b2
+
+  1 2 3 4 5 6 7 8 
+A - - - - - - - - 
+B - O - X O - - - 
+C - X - O X - - - 
+D - X O O X O - - 
+E - - - O X - - - 
+F - - - X O - - - 
+G - - - - - - - - 
+H - - - - - - - - 
+
+
+AI is thinking...
+My move is e2
+
+  1 2 3 4 5 6 7 8 
+A - - - - - - - - 
+B - O - X O - - - 
+C - X - O X - - - 
+D - X O O X O - - 
+E - X - O X - - - 
+F - - - X O - - - 
+G - - - - - - - - 
+H - - - - - - - - 
+
+
+Enter your move: f2
+
+  1 2 3 4 5 6 7 8 
+A - - - - - - - - 
+B - O - X O - - - 
+C - X - O X - - - 
+D - X O O X O - - 
+E - X - O X - - - 
+F - O - X O - - - 
+G - - - - - - - - 
+H - - - - - - - - 
+
+
+AI is thinking...
+My move is c6
+
+  1 2 3 4 5 6 7 8 
+A - - - - - - - - 
+B - O - X O - - - 
+C - X - O X X - - 
+D - X O O X O - - 
+E - X - O X - - - 
+F - O - X O - - - 
+G - - - - - - - - 
+H - - - - - - - - 
+
+
+Enter your move: c8
+
+  1 2 3 4 5 6 7 8 
+A - - - - - - - - 
+B - O - X O - - - 
+C - X - O X X - O 
+D - X O O X O - - 
+E - X - O X - - - 
+F - O - X O - - - 
+G - - - - - - - - 
+H - - - - - - - - 
+
+
+AI is thinking...
+My move is e6
+
+  1 2 3 4 5 6 7 8 
+A - - - - - - - - 
+B - O - X O - - - 
+C - X - O X X - O 
+D - X O O X O - - 
+E - X - O X X - - 
+F - O - X O - - - 
+G - - - - - - - - 
+H - - - - - - - - 
+
+
+Enter your move: e8
+
+  1 2 3 4 5 6 7 8 
+A - - - - - - - - 
+B - O - X O - - - 
+C - X - O X X - O 
+D - X O O X O - - 
+E - X - O X X - O 
+F - O - X O - - - 
+G - - - - - - - - 
+H - - - - - - - - 
+
+
+AI is thinking...
+My move is f8
+
+  1 2 3 4 5 6 7 8 
+A - - - - - - - - 
+B - O - X O - - - 
+C - X - O X X - O 
+D - X O O X O - - 
+E - X - O X X - O 
+F - O - X O - - X 
+G - - - - - - - - 
+H - - - - - - - - 
+
+
+Enter your move: 18
+Not a legal move. 1 is not ok.
+Enter your move: a8
+
+  1 2 3 4 5 6 7 8 
+A - - - - - - - O 
+B - O - X O - - - 
+C - X - O X X - O 
+D - X O O X O - - 
+E - X - O X X - O 
+F - O - X O - - X 
+G - - - - - - - - 
+H - - - - - - - - 
+
+
+AI is thinking...
+My move is d8
+
+  1 2 3 4 5 6 7 8 
+A - - - - - - - O 
+B - O - X O - - - 
+C - X - O X X - O 
+D - X O O X O - X 
+E - X - O X X - O 
+F - O - X O - - X 
+G - - - - - - - - 
+H - - - - - - - - 
+
+
+Enter your move: a12
+Invalid entry try again.
+Enter your move: a1
+
+  1 2 3 4 5 6 7 8 
+A O - - - - - - O 
+B - O - X O - - - 
+C - X - O X X - O 
+D - X O O X O - X 
+E - X - O X X - O 
+F - O - X O - - X 
+G - - - - - - - - 
+H - - - - - - - - 
+
+
+AI is thinking...
+My move is c3
+
+  1 2 3 4 5 6 7 8 
+A O - - - - - - O 
+B - O - X O - - - 
+C - X X O X X - O 
+D - X O O X O - X 
+E - X - O X X - O 
+F - O - X O - - X 
+G - - - - - - - - 
+H - - - - - - - - 
+
+
+Enter your move: a4
+
+  1 2 3 4 5 6 7 8 
+A O - - O - - - O 
+B - O - X O - - - 
+C - X X O X X - O 
+D - X O O X O - X 
+E - X - O X X - O 
+F - O - X O - - X 
+G - - - - - - - - 
+H - - - - - - - - 
+
+
+AI is thinking...
+My move is a2
+
+  1 2 3 4 5 6 7 8 
+A O X - O - - - O 
+B - O - X O - - - 
+C - X X O X X - O 
+D - X O O X O - X 
+E - X - O X X - O 
+F - O - X O - - X 
+G - - - - - - - - 
+H - - - - - - - - 
+
+
+Enter your move: a3
+
+  1 2 3 4 5 6 7 8 
+A O X O O - - - O 
+B - O - X O - - - 
+C - X X O X X - O 
+D - X O O X O - X 
+E - X - O X X - O 
+F - O - X O - - X 
+G - - - - - - - - 
+H - - - - - - - - 
+
+
+AI is thinking...
+My move is a5
+
+  1 2 3 4 5 6 7 8 
+A O X O O X - - O 
+B - O - X O - - - 
+C - X X O X X - O 
+D - X O O X O - X 
+E - X - O X X - O 
+F - O - X O - - X 
+G - - - - - - - - 
+H - - - - - - - - 
+
+
+Enter your move: h3
+
+  1 2 3 4 5 6 7 8 
+A O X O O X - - O 
+B - O - X O - - - 
+C - X X O X X - O 
+D - X O O X O - X 
+E - X - O X X - O 
+F - O - X O - - X 
+G - - - - - - - - 
+H - - O - - - - - 
+
+
+AI is thinking...
+My move is h4
+
+  1 2 3 4 5 6 7 8 
+A O X O O X - - O 
+B - O - X O - - - 
+C - X X O X X - O 
+D - X O O X O - X 
+E - X - O X X - O 
+F - O - X O - - X 
+G - - - - - - - - 
+H - - O X - - - - 
+
+
+Enter your move: e3
+
+  1 2 3 4 5 6 7 8 
+A O X O O X - - O 
+B - O - X O - - - 
+C - X X O X X - O 
+D - X O O X O - X 
+E - X O O X X - O 
+F - O - X O - - X 
+G - - - - - - - - 
+H - - O X - - - - 
+
+
+AI is thinking...
+My move is f3
+
+  1 2 3 4 5 6 7 8 
+A O X O O X - - O 
+B - O - X O - - - 
+C - X X O X X - O 
+D - X O O X O - X 
+E - X O O X X - O 
+F - O X X O - - X 
+G - - - - - - - - 
+H - - O X - - - - 
+
+
+Enter your move: g3
+
+  1 2 3 4 5 6 7 8 
+A O X O O X - - O 
+B - O - X O - - - 
+C - X X O X X - O 
+D - X O O X O - X 
+E - X O O X X - O 
+F - O X X O - - X 
+G - - O - - - - - 
+H - - O X - - - - 
+
+
+AI is thinking...
+My move is g6
+
+  1 2 3 4 5 6 7 8 
+A O X O O X - - O 
+B - O - X O - - - 
+C - X X O X X - O 
+D - X O O X O - X 
+E - X O O X X - O 
+F - O X X O - - X 
+G - - O - - X - - 
+H - - O X - - - - 
+
+
+Enter your move: f6
+
+  1 2 3 4 5 6 7 8 
+A O X O O X - - O 
+B - O - X O - - - 
+C - X X O X X - O 
+D - X O O X O - X 
+E - X O O X X - O 
+F - O X X O O - X 
+G - - O - - X - - 
+H - - O X - - - - 
+
+
+AI is thinking...
+My move is g7
+
+  1 2 3 4 5 6 7 8 
+A O X O O X - - O 
+B - O - X O - - - 
+C - X X O X X - O 
+D - X O O X O - X 
+E - X O O X X - O 
+F - O X X O O - X 
+G - - O - - X X - 
+H - - O X - - - - 
+
+
+Enter your move: g5
+
+  1 2 3 4 5 6 7 8 
+A O X O O X - - O 
+B - O - X O - - - 
+C - X X O X X - O 
+D - X O O X O - X 
+E - X O O X X - O 
+F - O X X O O - X 
+G - - O - O X X - 
+H - - O X - - - - 
+
+
+AI is thinking...
+My move is g2
+
+  1 2 3 4 5 6 7 8 
+A O X O O X - - O 
+B - O - X O - - - 
+C - X X O X X - O 
+D - X O O X O - X 
+E - X O O X X - O 
+F - O X X O O - X 
+G - X O - O X X - 
+H - - O X - - - - 
+
+
+Enter your move: g8
+
+  1 2 3 4 5 6 7 8 
+A O X O O X - - O 
+B - O - X O - - - 
+C - X X O X X - O 
+D - X O O X O - X 
+E - X O O X X - O 
+F - O X X O O - X 
+G - X O - O X X O 
+H - - O X - - - - 
+
+
+AI is thinking...
+My move is f7
+
+  1 2 3 4 5 6 7 8 
+A O X O O X - - O 
+B - O - X O - - - 
+C - X X O X X - O 
+D - X O O X O - X 
+E - X O O X X - O 
+F - O X X O O X X 
+G - X O - O X X O 
+H - - O X - - - - 
+
+
+Enter your move: h7
+
+  1 2 3 4 5 6 7 8 
+A O X O O X - - O 
+B - O - X O - - - 
+C - X X O X X - O 
+D - X O O X O - X 
+E - X O O X X - O 
+F - O X X O O X X 
+G - X O - O X X O 
+H - - O X - - O - 
+
+
+AI is thinking...
+My move is c1
+
+  1 2 3 4 5 6 7 8 
+A O X O O X - - O 
+B - O - X O - - - 
+C X X X O X X - O 
+D - X O O X O - X 
+E - X O O X X - O 
+F - O X X O O X X 
+G - X O - O X X O 
+H - - O X - - O - 
+
+
+Enter your move: h4
+Invalid entry try again.
+Enter your move: h5
+
+  1 2 3 4 5 6 7 8 
+A O X O O X - - O 
+B - O - X O - - - 
+C X X X O X X - O 
+D - X O O X O - X 
+E - X O O X X - O 
+F - O X X O O X X 
+G - X O - O X X O 
+H - - O X O - O - 
+
+
+AI is thinking...
+My move is d7
+
+  1 2 3 4 5 6 7 8 
+A O X O O X - - O 
+B - O - X O - - - 
+C X X X O X X - O 
+D - X O O X O X X 
+E - X O O X X - O 
+F - O X X O O X X 
+G - X O - O X X O 
+H - - O X O - O - 
+
+
+Enter your move: e7
+
+  1 2 3 4 5 6 7 8 
+A O X O O X - - O 
+B - O - X O - - - 
+C X X X O X X - O 
+D - X O O X O X X 
+E - X O O X X O O 
+F - O X X O O X X 
+G - X O - O X X O 
+H - - O X O - O - 
+
+
+AI is thinking...
+My move is h8
+
+  1 2 3 4 5 6 7 8 
+A O X O O X - - O 
+B - O - X O - - - 
+C X X X O X X - O 
+D - X O O X O X X 
+E - X O O X X O O 
+F - O X X O O X X 
+G - X O - O X X O 
+H - - O X O - O X 
+
+
+Enter your move: b6
+
+  1 2 3 4 5 6 7 8 
+A O X O O X - - O 
+B - O - X O O - - 
+C X X X O X X - O 
+D - X O O X O X X 
+E - X O O X X O O 
+F - O X X O O X X 
+G - X O - O X X O 
+H - - O X O - O X 
+
+
+AI is thinking...
+My move is b7
+
+  1 2 3 4 5 6 7 8 
+A O X O O X - - O 
+B - O - X O O X - 
+C X X X O X X - O 
+D - X O O X O X X 
+E - X O O X X O O 
+F - O X X O O X X 
+G - X O - O X X O 
+H - - O X O - O X 
+
+
+Enter your move: e1
+
+  1 2 3 4 5 6 7 8 
+A O X O O X - - O 
+B - O - X O O X - 
+C X X X O X X - O 
+D - X O O X O X X 
+E O X O O X X O O 
+F - O X X O O X X 
+G - X O - O X X O 
+H - - O X O - O X 
+
+
+AI is thinking...
+My move is c7
+
+  1 2 3 4 5 6 7 8 
+A O X O O X - - O 
+B - O - X O O X - 
+C X X X O X X X O 
+D - X O O X O X X 
+E O X O O X X O O 
+F - O X X O O X X 
+G - X O - O X X O 
+H - - O X O - O X 
+
+
+Enter your move: a7
+
+  1 2 3 4 5 6 7 8 
+A O X O O X - O O 
+B - O - X O O X - 
+C X X X O X X X O 
+D - X O O X O X X 
+E O X O O X X O O 
+F - O X X O O X X 
+G - X O - O X X O 
+H - - O X O - O X 
+
+
+AI is thinking...
+My move is g1
+
+  1 2 3 4 5 6 7 8 
+A O X O O X - O O 
+B - O - X O O X - 
+C X X X O X X X O 
+D - X O O X O X X 
+E O X O O X X O O 
+F - O X X O O X X 
+G X X O - O X X O 
+H - - O X O - O X 
+
+
+Enter your move: f1
+
+  1 2 3 4 5 6 7 8 
+A O X O O X - O O 
+B - O - X O O X - 
+C X X X O X X X O 
+D - X O O X O X X 
+E O X O O X X O O 
+F O O X X O O X X 
+G X X O - O X X O 
+H - - O X O - O X 
+
+
+AI is thinking...
+My move is h6
+
+  1 2 3 4 5 6 7 8 
+A O X O O X - O O 
+B - O - X O O X - 
+C X X X O X X X O 
+D - X O O X O X X 
+E O X O O X X O O 
+F O O X X O O X X 
+G X X O - O X X O 
+H - - O X O X O X 
+
+
+Enter your move: d1
+
+  1 2 3 4 5 6 7 8 
+A O X O O X - O O 
+B - O - X O O X - 
+C X X X O X X X O 
+D O X O O X O X X 
+E O X O O X X O O 
+F O O X X O O X X 
+G X X O - O X X O 
+H - - O X O X O X 
+
+
+AI is thinking...
+My move is h2
+
+  1 2 3 4 5 6 7 8 
+A O X O O X - O O 
+B - O - X O O X - 
+C X X X O X X X O 
+D O X O O X O X X 
+E O X O O X X O O 
+F O O X X O O X X 
+G X X O - O X X O 
+H - X O X O X O X 
+
+
+Enter your move: b1
+
+  1 2 3 4 5 6 7 8 
+A O X O O X - O O 
+B O O - X O O X - 
+C X X X O X X X O 
+D O X O O X O X X 
+E O X O O X X O O 
+F O O X X O O X X 
+G X X O - O X X O 
+H - X O X O X O X 
+
+
+AI is thinking...
+My move is h1
+
+  1 2 3 4 5 6 7 8 
+A O X O O X - O O 
+B O O - X O O X - 
+C X X X O X X X O 
+D O X O O X O X X 
+E O X O O X X O O 
+F O O X X O O X X 
+G X X O - O X X O 
+H X X O X O X O X 
+
+
+Enter your move: b3
+
+  1 2 3 4 5 6 7 8 
+A O X O O X - O O 
+B O O O X O O X - 
+C X X X O X X X O 
+D O X O O X O X X 
+E O X O O X X O O 
+F O O X X O O X X 
+G X X O - O X X O 
+H X X O X O X O X 
+
+
+AI is thinking...
+My move is g4
+
+  1 2 3 4 5 6 7 8 
+A O X O O X - O O 
+B O O O X O O X - 
+C X X X O X X X O 
+D O X O O X O X X 
+E O X O O X X O O 
+F O O X X O O X X 
+G X X O X O X X O 
+H X X O X O X O X 
+
+
+Enter your move: a6
+
+  1 2 3 4 5 6 7 8 
+A O X O O X O O O 
+B O O O X O O X - 
+C X X X O X X X O 
+D O X O O X O X X 
+E O X O O X X O O 
+F O O X X O O X X 
+G X X O X O X X O 
+H X X O X O X O X 
+
+
+AI is thinking...
+My move is b8
+
+  1 2 3 4 5 6 7 8 
+A O X O O X O O O 
+B O O O X O O X X 
+C X X X O X X X O 
+D O X O O X O X X 
+E O X O O X X O O 
+F O O X X O O X X 
+G X X O X O X X O 
+H X X O X O X O X 
+
+The game is a draw!

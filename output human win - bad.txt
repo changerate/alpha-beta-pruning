@@ -1,0 +1,136 @@
+
+Welcome to the alpha-beta pruning algorithm
+that's battling you in a game of tic-tac-toe.
+
+  1 2 3 4 5 6 7 8 
+A - - - - - - - - 
+B - - - - - - - - 
+C - - - - - - - - 
+D - - - - - - - - 
+E - - - - - - - - 
+F - - - - - - - - 
+G - - - - - - - - 
+H - - - - - - - - 
+
+Who would you like to go first? Human or AI? (human or ai): human
+Enter your move: e4
+
+  1 2 3 4 5 6 7 8 
+A - - - - - - - - 
+B - - - - - - - - 
+C - - - - - - - - 
+D - - - - - - - - 
+E - - - O - - - - 
+F - - - - - - - - 
+G - - - - - - - - 
+H - - - - - - - - 
+
+
+AI is thinking...
+My move is d4
+
+  1 2 3 4 5 6 7 8 
+A - - - - - - - - 
+B - - - - - - - - 
+C - - - - - - - - 
+D - - - X - - - - 
+E - - - O - - - - 
+F - - - - - - - - 
+G - - - - - - - - 
+H - - - - - - - - 
+
+
+Enter your move: e5
+
+  1 2 3 4 5 6 7 8 
+A - - - - - - - - 
+B - - - - - - - - 
+C - - - - - - - - 
+D - - - X - - - - 
+E - - - O O - - - 
+F - - - - - - - - 
+G - - - - - - - - 
+H - - - - - - - - 
+
+
+AI is thinking...
+My move is e3
+
+  1 2 3 4 5 6 7 8 
+A - - - - - - - - 
+B - - - - - - - - 
+C - - - - - - - - 
+D - - - X - - - - 
+E - - X O O - - - 
+F - - - - - - - - 
+G - - - - - - - - 
+H - - - - - - - - 
+
+
+Enter your move: d5
+
+  1 2 3 4 5 6 7 8 
+A - - - - - - - - 
+B - - - - - - - - 
+C - - - - - - - - 
+D - - - X O - - - 
+E - - X O O - - - 
+F - - - - - - - - 
+G - - - - - - - - 
+H - - - - - - - - 
+
+
+AI is thinking...
+My move is c5
+
+  1 2 3 4 5 6 7 8 
+A - - - - - - - - 
+B - - - - - - - - 
+C - - - - X - - - 
+D - - - X O - - - 
+E - - X O O - - - 
+F - - - - - - - - 
+G - - - - - - - - 
+H - - - - - - - - 
+
+
+Enter your move: e6
+
+  1 2 3 4 5 6 7 8 
+A - - - - - - - - 
+B - - - - - - - - 
+C - - - - X - - - 
+D - - - X O - - - 
+E - - X O O O - - 
+F - - - - - - - - 
+G - - - - - - - - 
+H - - - - - - - - 
+
+
+AI is thinking...
+My move is f5
+
+  1 2 3 4 5 6 7 8 
+A - - - - - - - - 
+B - - - - - - - - 
+C - - - - X - - - 
+D - - - X O - - - 
+E - - X O O O - - 
+F - - - - X - - - 
+G - - - - - - - - 
+H - - - - - - - - 
+
+
+Enter your move: e7
+
+  1 2 3 4 5 6 7 8 
+A - - - - - - - - 
+B - - - - - - - - 
+C - - - - X - - - 
+D - - - X O - - - 
+E - - X O O O O - 
+F - - - - X - - - 
+G - - - - - - - - 
+H - - - - - - - - 
+
+you win

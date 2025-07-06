@@ -1,0 +1,150 @@
+
+Welcome to the alpha-beta pruning algorithm
+that's battling you in a game of tic-tac-toe.
+
+  1 2 3 4 5 6 7 8 
+A - - - - - - - - 
+B - - - - - - - - 
+C - - - - - - - - 
+D - - - - - - - - 
+E - - - - - - - - 
+F - - - - - - - - 
+G - - - - - - - - 
+H - - - - - - - - 
+
+Who would you like to go first? Human or AI? (human or ai): human
+Enter your move: g5
+
+  1 2 3 4 5 6 7 8 
+A - - - - - - - - 
+B - - - - - - - - 
+C - - - - - - - - 
+D - - - - - - - - 
+E - - - - - - - - 
+F - - - - - - - - 
+G - - - - O - - - 
+H - - - - - - - - 
+
+
+AI is thinking...
+My move is g6
+
+  1 2 3 4 5 6 7 8 
+A - - - - - - - - 
+B - - - - - - - - 
+C - - - - - - - - 
+D - - - - - - - - 
+E - - - - - - - - 
+F - - - - - - - - 
+G - - - - O X - - 
+H - - - - - - - - 
+
+
+Enter your move: f5
+
+  1 2 3 4 5 6 7 8 
+A - - - - - - - - 
+B - - - - - - - - 
+C - - - - - - - - 
+D - - - - - - - - 
+E - - - - - - - - 
+F - - - - O - - - 
+G - - - - O X - - 
+H - - - - - - - - 
+
+
+AI is thinking...
+My move is e5
+
+  1 2 3 4 5 6 7 8 
+A - - - - - - - - 
+B - - - - - - - - 
+C - - - - - - - - 
+D - - - - - - - - 
+E - - - - X - - - 
+F - - - - O - - - 
+G - - - - O X - - 
+H - - - - - - - - 
+
+
+Enter your move: d2
+
+  1 2 3 4 5 6 7 8 
+A - - - - - - - - 
+B - - - - - - - - 
+C - - - - - - - - 
+D - O - - - - - - 
+E - - - - X - - - 
+F - - - - O - - - 
+G - - - - O X - - 
+H - - - - - - - - 
+
+
+AI is thinking...
+My move is e6
+
+  1 2 3 4 5 6 7 8 
+A - - - - - - - - 
+B - - - - - - - - 
+C - - - - - - - - 
+D - O - - - - - - 
+E - - - - X X - - 
+F - - - - O - - - 
+G - - - - O X - - 
+H - - - - - - - - 
+
+
+Enter your move: e4
+
+  1 2 3 4 5 6 7 8 
+A - - - - - - - - 
+B - - - - - - - - 
+C - - - - - - - - 
+D - O - - - - - - 
+E - - - O X X - - 
+F - - - - O - - - 
+G - - - - O X - - 
+H - - - - - - - - 
+
+
+AI is thinking...
+My move is f6
+
+  1 2 3 4 5 6 7 8 
+A - - - - - - - - 
+B - - - - - - - - 
+C - - - - - - - - 
+D - O - - - - - - 
+E - - - O X X - - 
+F - - - - O X - - 
+G - - - - O X - - 
+H - - - - - - - - 
+
+
+Enter your move: d6
+
+  1 2 3 4 5 6 7 8 
+A - - - - - - - - 
+B - - - - - - - - 
+C - - - - - - - - 
+D - O - - - O - - 
+E - - - O X X - - 
+F - - - - O X - - 
+G - - - - O X - - 
+H - - - - - - - - 
+
+
+AI is thinking...
+My move is h6
+
+  1 2 3 4 5 6 7 8 
+A - - - - - - - - 
+B - - - - - - - - 
+C - - - - - - - - 
+D - O - - - O - - 
+E - - - O X X - - 
+F - - - - O X - - 
+G - - - - O X - - 
+H - - - - - X - - 
+
+The AI wins
