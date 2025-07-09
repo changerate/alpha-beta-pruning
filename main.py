@@ -505,7 +505,6 @@ if __name__ == "__main__":
     # example of a draw: 
     
     b = setup()
-    b = [['O','X','O','O','X','-','O','O'],['O','O','O','X','O','O','X','-'],['X','X','X','O','X','X','X','O'],['O','X','O','O','X','O','X','X'],['O','X','O','O','X','X','O','O'],['O','O','X','X','O','O','X','X'],['X','X','O','X','O','X','X','O'],['X','X','O','X','O','X','O','X']]
     printBoard()
     
     aiFirst = input("Who would you like to go first? Human or AI? (human or ai): ")
