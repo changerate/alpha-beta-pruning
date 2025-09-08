@@ -337,7 +337,7 @@ def minMove(depth, alpha, beta, timeStart):
     best = 1000000
     winner = check4Winner()
 
-    if time.time() - timeStart > MAX_TIME - 0.05:
+    if time.time() - timeStart > MAX_TIME - 0.1:
         return evaluate(depth - 1)
     if winner:
         return winner
@@ -503,9 +503,9 @@ if __name__ == "__main__":
     clear_terminal()
     
     # example of a draw: 
-    
-    b = setup()
     b = [['O','X','O','O','X','-','O','O'],['O','O','O','X','O','O','X','-'],['X','X','X','O','X','X','X','O'],['O','X','O','O','X','O','X','X'],['O','X','O','O','X','X','O','O'],['O','O','X','X','O','O','X','X'],['X','X','O','X','O','X','X','O'],['X','X','O','X','O','X','O','X']]
+
+    b = setup()
     printBoard()
     
     aiFirst = input("Who would you like to go first? Human or AI? (human or ai): ")
